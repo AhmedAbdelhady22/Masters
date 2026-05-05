@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional University Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            background-color: transparent;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: none;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section img {
+            height: 80px;
+            width: auto;
+        }
+
+        .logo-text h3 {
+            color: white;
+            
+            margin: 0;
+            
+        }
+
+        .logo-text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            margin: 5px 0 0 0;
+        }
+
+        .button-section {
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .button-section h1 {
+            color: white;
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .button-section.hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #d4a574;
+            color: white;
+            padding: 16px 50px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #e8bc88;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .container.hidden {
+            display: none;
+        }
+
+        .photo-section {
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        .photo-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-section {
+            padding: 50px 45px;
+            background-color: #f9f9f9;
+        }
+
+        .text-section h1 {
+            color: #1a3a52;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .text-section p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .back-button {
+            display: none;
+            background-color: #666;
+            margin-top: 40px;
+            padding: 12px 35px;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #888;
+        }
+
+        .back-button.show {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="logo-section">
+                <img src="scr\WhatsApp_Image_2026-05-05_at_10.13.11_PM-removebg-preview.png" alt="University Logo">
+                <div class="logo-text">
+                    <h3>YTB Masters Program</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="button-section" id="buttonSection">
+            <h1>Welcome to YTB Masters Program</h1>
+            <button onclick="showContent()">View Content</button>
+        </div>
+
+        <div class="container hidden" id="contentContainer">
+            <div class="photo-section">
+                <img src="scr\aaa.jpeg" alt="Featured photo">
+            </div>
+            <div class="text-section">
+                <h1>Go Fuck your self</h1>
+                <p>There's no Masters Program for a fat ass like you here in turkey go back to your country suriyeli nigga</p>
+                <button class="back-button" id="backButton" onclick="goBack()">← Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent() {
+            document.getElementById('buttonSection').classList.add('hidden');
+            document.getElementById('contentContainer').classList.remove('hidden');
+            document.getElementById('backButton').classList.add('show');
+        }
+
+        function goBack() {
+            document.getElementById('buttonSection').classList.remove('hidden');
+            document.getElementById('contentContainer').classList.add('hidden');
+            document.getElementById('backButton').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
